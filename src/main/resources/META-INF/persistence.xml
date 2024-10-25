@@ -1,0 +1,29 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             version="2.2">
+    <persistence-unit name="persistence-data" transaction-type="RESOURCE_LOCAL">
+
+        <class>com.jpa.entity.UserEntity</class>
+
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.use_sql_comments" value="true"/>
+
+
+            <property name="hibernate.hikari.dataSourceClassName" value="com.mysql.cj.jdbc.MysqlDataSource" />
+            <property name="hibernate.hikari.dataSource.url" value="jdbc:mysql://localhost:3306/testJPA" />
+            <property name="hibernate.hikari.dataSource.user" value="root" />
+            <property name="hibernate.hikari.dataSource.password" value="1942004anh" />
+            <property name="hibernate.hikari.maximumPoolSize" value="5" />
+            <property name="hibernate.hikari.minimumIdle" value="2" />
+            <property name="hibernate.hikari.idleTimeout" value="30000" />
+            <property name="hibernate.hikari.maxLifetime" value="1800000" />
+            <property name="hibernate.hikari.connectionTimeout" value="30000" />
+            <property name="hibernate.hikari.leakDetectionThreshold" value="5000" />
+            <property name="hibernate.hikari.connectionTestQuery" value="SELECT 1" />
+        </properties>
+    </persistence-unit>
+
+</persistence>
